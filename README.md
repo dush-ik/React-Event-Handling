@@ -1,4 +1,4 @@
-# React-Event-Handling
+# React Event Handling
 Event Handling with Parameter.
 
 There are two ways to bind event handler in jsx. 
