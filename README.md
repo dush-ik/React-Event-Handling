@@ -5,7 +5,7 @@ There are two ways to bind event handler in jsx.
 
 **1. Using bind function in constructor.**
 ```
-  export default SomeClass extends React.Component{
+  export default class SomeClass extends React.Component{
     constructor(props){
       super(props)
       this.clickMe.bind(this); 
@@ -25,7 +25,7 @@ There are two ways to bind event handler in jsx.
    
 **2. Using arrow function in code.**
 ```
-  export default SomeClass extends React.Component{
+  export default class SomeClass extends React.Component{
     constructor(props){
       super(props)
     }
@@ -88,9 +88,9 @@ Now we can use this function into our component.
       super(props)
     }
 
-    clickMe = memoiz(param) => (event) =>{
+    clickMe = memoiz((param) => (event) =>{
       //do stuff
-    }
+    })
 
     render(){
       <div>
