@@ -8,7 +8,7 @@ There are two ways to bind event handler in jsx.
   export default class SomeClass extends React.Component{
     constructor(props){
       super(props)
-      this.clickMe.bind(this); 
+      this.clickMe = this.clickMe.bind(this); 
     }
 
     clickMe(event){
