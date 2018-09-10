@@ -72,10 +72,11 @@ We can solve this issue with a memoization function.
     let cache = {};
     return function (){
       let aArgs = Array.prototype.slice.call(arguments);
-      if(cache[aArgs]){
-        return cache[aArgs];
+      let key = JSON.stringify(aArgs);
+      if(cache[key]){
+        return cache[key];
       }else{
-        return (cache[aArgs] = funct.apply(this, aArgs));
+        return (cache[key] = funct.apply(this, aArgs));
       }
     }
   }
